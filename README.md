@@ -24,7 +24,7 @@ The following **extensions** are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://gifs.com/gif/tippy-vl3nV5' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://j.gifs.com/vl3nV5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
