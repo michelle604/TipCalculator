@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--veiw on the left side -->
+    <TextView
+        android:id="@+id/tvBaseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Base"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="15%"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel" />
+
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Tip"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercent" />
+
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Total"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
+
+    <!-- view on the right side -->
+    <EditText
+        android:id="@+id/etBase"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="8"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercent"
+        app:layout_constraintStart_toEndOf="@+id/tvTipPercent"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercent" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTipLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvTipLabel"
+        tools:text="3.78" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTotalLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalLabel"
+        tools:text="12.66" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/seekBarTip"
+        app:layout_constraintStart_toStartOf="@id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        tools:text="Acceptable" />
+
+    <!-- Footer views -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Made with 💖 by Michelle"
+        android:textAllCaps="true"
+        android:textColor="#E1DFDF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
